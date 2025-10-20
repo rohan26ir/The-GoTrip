@@ -48,8 +48,8 @@ const Navbar = () => {
         { id: 43, name: "Tour Guide", href: "/services/guide" },
       ],
     },
-    { id: 5, name: "About", href: "/AboutUs" },
-    { id: 6, name: "Contact", href: "/contact" },
+    { id: 5, name: "About", href: "/About-us" },
+    { id: 6, name: "Contact", href: "/Contact-us" },
   ];
 
   const user = false; // mock user
