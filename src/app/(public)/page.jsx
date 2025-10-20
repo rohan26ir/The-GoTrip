@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import NewsLetter from './components/NewsLetter';
+import OurTourActivities, { MarqueeDemo } from '../../../components/marquee/OurTourActivities';
 
 const page = () => {
   return (
@@ -8,6 +9,11 @@ const page = () => {
 
       <section>
         <Hero></Hero>
+      </section>
+
+
+      <section>
+        <MarqueeDemo></MarqueeDemo>
       </section>
 
 
