@@ -1,8 +1,8 @@
 'use client'
 
-import { Marquee } from "@/components/ui/marquee"
 import { cn } from "@/lib/utils"
 import { useState } from "react"
+import { Marquee } from "@/components/ui/marquee"
 
 // Import your local images
 import image1 from '../../public/marquee/image.webp'
@@ -91,24 +91,24 @@ const firstRow = [
   { ...images[3], offset: 5 },
   { ...images[4], offset: -5 },
   { ...images[5], offset: 5 },
-  { ...images[6], offset: 0 }, // Center cards
-  { ...images[7], offset: 0 }, // Center cards
-  { ...images[8], offset: 0 }, // Center cards
-  { ...images[9], offset: 0 }, // Center cards
+  { ...images[6], offset: 0 },
+  { ...images[7], offset: 0 },
+  { ...images[8], offset: 0 },
+  { ...images[9], offset: 0 },
 ]
 
 // Create staggered layout for second row (right to left)
 const secondRow = [
   { ...images[10], offset: 5 },
   { ...images[11], offset: -5 },
-  { ...images[0], offset: 5 }, // Repeating some images for continuous flow
+  { ...images[0], offset: 5 }, 
   { ...images[1], offset: -5 },
   { ...images[2], offset: 5 },
   { ...images[3], offset: -5 },
-  { ...images[4], offset: 0 }, // Center cards
-  { ...images[5], offset: 0 }, // Center cards
-  { ...images[6], offset: 0 }, // Center cards
-  { ...images[7], offset: 0 }, // Center cards
+  { ...images[4], offset: 0 },
+  { ...images[5], offset: 0 },
+  { ...images[6], offset: 0 },
+  { ...images[7], offset: 0 },
 ]
 
 const ImageCard = ({ img, offset }) => {
