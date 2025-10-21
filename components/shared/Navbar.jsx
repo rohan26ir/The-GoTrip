@@ -1,13 +1,18 @@
 "use client";
 
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { FiMenu, FiX, FiChevronDown, FiUser } from "react-icons/fi";
+
+import navlogo from '../../public/logo/navbar.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
 
@@ -27,18 +32,6 @@ const Navbar = () => {
       ],
     },
     {
-      id: 3,
-      name: "Tour Packages",
-      href: "/packages",
-      dropdown: [
-        { id: 31, name: "Weekend Getaways", href: "/packages/weekend" },
-        { id: 32, name: "Adventure Tours", href: "/packages/adventure" },
-        { id: 33, name: "Cultural Heritage", href: "/packages/cultural" },
-        { id: 34, name: "Beach Holidays", href: "/packages/beach" },
-        { id: 35, name: "Hill Station Tours", href: "/packages/hill-station" },
-      ],
-    },
-    {
       id: 4,
       name: "Services",
       href: "/services",
@@ -53,6 +46,17 @@ const Navbar = () => {
   ];
 
   const user = false; // mock user
+
+  // Scroll detection for sticky effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -96,12 +100,40 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full mx-auto z-50 bg-black text-white shadow-lg border-b border-gray-800">
-      <div className="max-w-[2500px] h-20 mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4">
+    <nav className="fixed top-1 left-0 right-0 mx-auto z-50 text-white transition-all duration-300">
+      <div className="relative lg:max-w-[900px] xl:max-w-[2500px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4">
+
+        {/* Blurred SVG Background - Only this part gets blurred */}
+        <div className={`absolute m-auto inset-0 -z-10 h-full transition-all duration-300 ${
+          isScrolled ? '' : ''
+        }`}>
+          <svg width="100%" height="100%" viewBox="0 0 755 69" fill="rgba(0, 0, 0, .5)" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_353_758)">
+              <path d="M754.481 6V47.8143C754.481 49.5338 753.646 51.1543 752.223 52.1943L731.458 67.38C730.465 68.1066 729.251 68.5 728.004 68.5H6.23087C3.07631 68.5 0.519043 66.0376 0.519043 63V23.0145C0.519043 21.3407 1.31062 19.758 2.66968 18.7144L24.8277 1.69987C25.8394 0.923047 27.095 0.5 28.3888 0.5H748.769C751.923 0.5 754.481 2.96243 754.481 6Z" stroke="url(#paint0_linear_353_758)"></path>
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_353_758" x1="195.928" y1="2.4056" x2="240.176" y2="181.668" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#1E1A21"></stop>
+                <stop offset="0.315" stopColor="#87838B"></stop>
+                <stop offset="0.54" stopColor="#1E1A21"></stop>
+                <stop offset="1" stopColor="#ACA0B6"></stop>
+              </linearGradient>
+              <clipPath id="clip0_353_758">
+                <rect width="100%" height="100%" fill="black"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-            <h1 className="text-2xl sm:text-3xl text-[#FA6741] font-extrabold">The GoTour</h1>
+          <Link href="/" className="text-2xl font-bold flex items-center gap-0.5">
+            <Image 
+            src={navlogo}
+            alt="The GoTour Logo"
+            className="h-10 w-10 bg-[#FA6741] rounded-full object-cover"
+            />
+            <h1 className="text-2xl sm:text-3xl text-[#FA6741] font-extrabold">GoTour</h1>
           </Link>
         </div>
 
@@ -125,7 +157,7 @@ const Navbar = () => {
               {/* Dropdown Menu */}
               {item.dropdown && (
                 <div
-                  className={`absolute top-full left-0 w-56 bg-white rounded-xl shadow-2xl py-3 transition-all duration-300 z-50 border border-gray-100 ${
+                  className={`absolute top-full left-0 w-56 bg-white rounded-xl py-3 transition-all duration-300 z-50 border border-gray-100 ${
                     activeDropdown === item.id
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible -translate-y-2"
@@ -150,7 +182,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-4">
           {user ? (
             <Link href="/dashboard">
-              <button className="flex items-center gap-2 px-5 py-2.5 bg-[#FA6741] text-white font-semibold rounded-full hover:bg-[#e55a34] transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
+              <button className="flex items-center gap-2 px-5 py-2.5 bg-[#FA6741] text-white font-semibold rounded-full hover:bg-[#e55a34] transition-all duration-300 hover:shadow-xl cursor-pointer">
                 <FiUser className="text-sm" />
                 My Account
               </button>
@@ -158,9 +190,12 @@ const Navbar = () => {
           ) : (
             <>
               <Link href="/signup">
-                <button className="cursor-pointer px-6 py-2.5 bg-[#FA6741] rounded-full hover:bg-[#e55a34] transition-all duration-300 shadow-lg hover:shadow-xl font-semibold">
-                  Sign Up
-                </button>
+                <ShimmerButton 
+                onClick={closeMobileMenu}
+                background	 = "#FA6741"
+                 >
+                  Create Account
+                </ShimmerButton>
               </Link>
             </>
           )}
@@ -275,12 +310,9 @@ const Navbar = () => {
                   </button>
                 </Link>
                 <Link href="/signup" className="block">
-                  <button
-                    onClick={closeMobileMenu}
-                    className="w-full py-3.5 px-4 text-center bg-[#FA6741] text-white font-semibold rounded-xl hover:bg-[#e55a34] transition-all duration-300 shadow-lg"
-                  >
+                  <ShimmerButton onClick={closeMobileMenu}>
                     Create Account
-                  </button>
+                  </ShimmerButton>
                 </Link>
               </>
             )}

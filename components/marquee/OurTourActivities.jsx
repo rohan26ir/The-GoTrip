@@ -85,12 +85,12 @@ const images = [
 
 // Create staggered layout for first row (left to right)
 const firstRow = [
-  { ...images[0], offset: -5 },
-  { ...images[1], offset: 5 },
-  { ...images[2], offset: -5 },
-  { ...images[3], offset: 5 },
-  { ...images[4], offset: -5 },
-  { ...images[5], offset: 5 },
+  { ...images[0], offset: -10 },
+  { ...images[1], offset: 10 },
+  { ...images[2], offset: -10 },
+  { ...images[3], offset: 10 },
+  { ...images[4], offset: -10 },
+  { ...images[5], offset: 15 },
   { ...images[6], offset: 0 },
   { ...images[7], offset: 0 },
   { ...images[8], offset: 0 },
@@ -99,12 +99,12 @@ const firstRow = [
 
 // Create staggered layout for second row (right to left)
 const secondRow = [
-  { ...images[10], offset: 5 },
-  { ...images[11], offset: -5 },
-  { ...images[0], offset: 5 }, 
-  { ...images[1], offset: -5 },
-  { ...images[2], offset: 5 },
-  { ...images[3], offset: -5 },
+  { ...images[10], offset: 10 },
+  { ...images[11], offset: -10 },
+  { ...images[0], offset: 10 }, 
+  { ...images[1], offset: -10 },
+  { ...images[2], offset: 10 },
+  { ...images[3], offset: -10 },
   { ...images[4], offset: 0 },
   { ...images[5], offset: 0 },
   { ...images[6], offset: 0 },
@@ -117,7 +117,7 @@ const ImageCard = ({ img, offset }) => {
   return (
     <div
       className={cn(
-        "relative w-64 h-64 cursor-pointer overflow-hidden rounded-xl border transition-all duration-500 ease-out",
+        "relative w-64 h-auto cursor-pointer overflow-hidden rounded-xl border transition-all duration-500 ease-out",
         "border-gray-200 bg-white shadow-sm hover:shadow-xl",
         "dark:border-gray-700 dark:bg-gray-800"
       )}
@@ -143,7 +143,7 @@ const ImageCard = ({ img, offset }) => {
         className={cn(
           "absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ease-out",
           isHovered 
-            ? "bg-gradient-to-br from-red-500/90 via-purple-500/90 to-pink-500/90 opacity-100"
+            ? "bg-lime-400/50 opacity-100"
             : "bg-black/0 opacity-0"
         )}
       >

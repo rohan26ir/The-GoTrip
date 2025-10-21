@@ -4,7 +4,7 @@ import Footer from "../../../components/shared/Footer";
 export default function PublicLayout({ children }) {
   return (
     <div className="">
-      <header className="h-20">
+      <header className="">
         <Navbar />
       </header>
 
