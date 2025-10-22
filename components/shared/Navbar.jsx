@@ -101,7 +101,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-1 left-0 right-0 mx-auto z-50 text-white transition-all duration-300">
-      <div className="relative lg:max-w-[900px] xl:max-w-[2500px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4">
+      <div className="relative lg:max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4">
 
         {/* Blurred SVG Background - Only this part gets blurred */}
         <div className={`absolute m-auto inset-0 -z-10 h-full transition-all duration-300 ${

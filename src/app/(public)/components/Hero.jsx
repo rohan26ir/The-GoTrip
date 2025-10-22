@@ -8,7 +8,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[800px] overflow-hidden">
+    <section className="relative h-screen min-h-[100vh] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 left-[-80%] lg:left-0">
         <Image
@@ -24,10 +24,11 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-[2500px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div className="max-w-2xl">
+      <div className="relative z-10 max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-[3%]">
+        <div className="max-w-4xl">
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             <span className="text-white text-sm font-medium">
               Explore Bangladesh Today
@@ -35,7 +36,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white  leading-tight">
             Discover The
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
               Beauty of Bangladesh
@@ -43,14 +44,14 @@ const Hero = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed max-w-xl">
+          <p className="text-lg sm:text-xl text-gray-200 mb-4 leading-relaxed max-w-xl">
             Experience breathtaking landscapes, rich cultural heritage, and
             unforgettable adventures. From the world-s longest sea beach to the
             mystical Sundarbans - your journey begins here.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-5">
             <Link href="/packages">
               <ShimmerButton background="#FA6741">
                 Explore Tours
