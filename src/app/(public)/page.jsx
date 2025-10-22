@@ -120,7 +120,7 @@ const Page = () => {
           reverseSpeed={45}
           className="my-8"
           imageClassName="w-80 h-60"
-          showInstagramOverlay={false}
+          showInstagramOverlay={true}
         />
       </section>
 
