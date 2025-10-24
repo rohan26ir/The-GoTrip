@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="max-w-4xl">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
+          <div className="font-apache inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             <span className="text-white text-sm font-medium">
               Explore Bangladesh Today
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white  leading-tight">
+          <h1 className="font-apache text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white  leading-tight">
             Discover The
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
               Beauty of Bangladesh

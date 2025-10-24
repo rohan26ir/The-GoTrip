@@ -40,7 +40,7 @@ export function ImageCard({
       {/* Title and Description */}
       {(title || description) && (
         <div className="text-center pb-20 max-w-[80%] mx-auto">
-          {title && <h2 className="text-4xl font-bold mb-4">{title}</h2>}
+          {title && <h2 className="font-apache text-4xl font-bold mb-4">{title}</h2>}
           {description && (
             <p className="text-xl text-gray-600 dark:text-gray-300">
               {description}

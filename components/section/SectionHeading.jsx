@@ -37,7 +37,7 @@ const SectionHeading = ({
 
       {/* Main Title */}
       <h2
-        className="text-2xl md:text-lg lg:text-4xl font-bold leading-tight max-w-4xl"
+        className="font-apache text-2xl md:text-lg lg:text-4xl font-bold leading-tight max-w-4xl"
         style={{ color: h2Textcolor }}
       >
         {title}

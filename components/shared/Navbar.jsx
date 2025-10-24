@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { FiMenu, FiX, FiChevronDown, FiUser } from "react-icons/fi";
 
 import navlogo from '../../public/logo/navbar.png'
+import navicon from '../../public/icon/icons8-aircraft.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +102,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-1 left-0 right-0 mx-auto z-50 text-white transition-all duration-300">
-      <div className="relative lg:max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4">
+      <div className="relative lg:max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4 ">
 
         {/* Blurred SVG Background - Only this part gets blurred */}
         <div className={`absolute m-auto inset-0 -z-10 h-full transition-all duration-300 ${
@@ -126,14 +127,14 @@ const Navbar = () => {
         </div>
 
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <Link href="/" className="text-2xl font-bold flex items-center gap-0.5">
             <Image 
-            src={navlogo}
+            src={navicon}
             alt="The GoTour Logo"
-            className="h-10 w-10 bg-[#FA6741] rounded-full object-cover"
+            className="h-10 w-10 -scale-x-100 text-white rounded-full object-cover"
             />
-            <h1 className="text-2xl sm:text-3xl text-[#FA6741] font-extrabold">GoTour</h1>
+            <h1 className="text-8xl font-apache sm:text-3xl text-[#FA6741] font-extrabold">GoTour</h1>
           </Link>
         </div>
 
@@ -192,7 +193,8 @@ const Navbar = () => {
               <Link href="/signup">
                 <ShimmerButton 
                 onClick={closeMobileMenu}
-                background	 = "#FA6741"
+                // background	 = "#FA6741"
+                className='font-apache text-lg'
                  >
                   Create Account
                 </ShimmerButton>

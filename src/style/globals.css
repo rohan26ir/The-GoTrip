@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
@@ -26,7 +28,16 @@ html {
   scrollbar-width: none;  /* Firefox */
 }
 
+@layer utilities {
+  .font-apache {
+    font-family: var(--font-apache), sans-serif;
+  }
+}
+
+
 @theme inline {
+  --font-apache: var(--font-apache);
+  --radius-sm: calc(var(--radius) - 4px);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
