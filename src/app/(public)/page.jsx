@@ -16,7 +16,11 @@ import image9 from  '../../../public/marquee/image2.webp'
 import image10 from '../../../public/marquee/image3.webp'
 import image11 from '../../../public/marquee/image4.webp'
 import image12 from '../../../public/marquee/image5.webp'
+
+
 import Imagedesign from "./components/Imagedesign";
+import HomeFAQ from "./components/HomeFAQ";
+import Worldmap from "./components/Worldmap";
 
 const travelImages = [
   {
@@ -125,8 +129,16 @@ const Page = () => {
         />
       </section>
 
-     <section className="max-w-[1700px] mx-auto">
+     <section className=" mx-auto">
        <Imagedesign></Imagedesign>
+     </section>
+     
+     <section>
+      <Worldmap> </Worldmap>
+     </section>
+
+     <section className="bg-lime-300/20 py-10">
+      <HomeFAQ></HomeFAQ>
      </section>
 
       <section>

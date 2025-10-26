@@ -39,7 +39,7 @@ export function ImageCard({
     >
       {/* Title and Description */}
       {(title || description) && (
-        <div className="text-center pb-10 max-w-[95%] md:max-w-[80%] mx-auto">
+        <div id="image-card" className="text-center pb-10 max-w-[95%] md:max-w-[80%] mx-auto">
           {title && <h2 className="font-apache text-[#323232] text-5xl md:text-7xl font-bold ">{title}</h2>}
           {description && (
             <p className="text-xl text-gray-600 dark:text-gray-300">

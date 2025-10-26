@@ -12,7 +12,7 @@ import SectionHeading from "../../../../components/section/SectionHeading";
 const Imagedesign = () => {
   return (
     <div>
-      <div className="w-[80%] h-auto mx-auto mb-32">
+      <div className="w-[100%] max-w-[1700px] h-auto mx-auto pt-20 pb-32 my-10">
         {/*  */}
         <div>
           <SectionHeading
@@ -33,7 +33,7 @@ const Imagedesign = () => {
               <Image
                 src={lastImage}
                 alt="Main Image"
-                className="w-full h-[65vh] object-cover object-[center_20%] top-0 rounded-lg shadow-lg"
+                className="w-[80%] mx-auto h-[400px] object-cover object-[center_20%] top-0 rounded-lg shadow-lg"
               />
             </div>
 

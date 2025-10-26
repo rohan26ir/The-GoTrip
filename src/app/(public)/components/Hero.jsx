@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a href="">
+      <a href="#image-card">
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <div className="animate-bounce">
             <div className="bg-white/10 backdrop-blur-sm rounded-full p-3 border border-white/20">
