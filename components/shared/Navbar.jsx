@@ -101,11 +101,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-1 left-0 right-0 mx-auto z-50 text-white transition-all duration-300">
-      <div className="relative lg:max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4 ">
+    <nav className="fixed top-0 md:top-1 left-0 right-0 mx-auto z-50 text-white transition-all duration-300">
+      <div className="relative md:max-w-[700px] lg:max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3 lg:py-4 bg-black/70  md:bg-black/0">
 
         {/* Blurred SVG Background - Only this part gets blurred */}
-        <div className={`absolute m-auto inset-0 -z-10 h-full transition-all duration-300 ${
+        <div className={`absolute hidden md:block m-auto inset-0 -z-10 h-full transition-all duration-300 ${
           isScrolled ? '' : ''
         }`}>
           <svg width="100%" height="100%" viewBox="0 0 755 69" fill="rgba(0, 0, 0, .5)" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@ const Navbar = () => {
             alt="The GoTour Logo"
             className="h-10 w-10 -scale-x-100 text-white rounded-full object-cover"
             />
-            <h1 className="text-8xl font-apache sm:text-3xl text-[#FA6741] font-extrabold">GoTour</h1>
+            <h1 className="text-5xl font-apache text-[#FA6741] font-extrabold">GoTour</h1>
           </Link>
         </div>
 
@@ -208,7 +208,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
-            className="p-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300 border border-gray-700"
+            className="p-3 rounded-xl bg-white/5 hover:bg-white/20 text-white transition-colors duration-300 border border-gray-700"
           >
             {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>

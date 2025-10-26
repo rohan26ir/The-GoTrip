@@ -9,7 +9,7 @@ const NewsLetter = () => {
     return (
         <div className=''>
             <div className='w-[95%] lg:w-[1100px] xl:w-[1200px] 2xl:w-[1700px] mx-auto py-10'>
-                <div className='relative p-10 w-[100%] md:w-[90%] lg:w-[80%]  mx-auto rounded-2xl overflow-hidden'>
+                <div className='relative p-10 w-[100%] md:w-[90%] lg:w-[90%]  mx-auto rounded-2xl overflow-hidden'>
                     {/* bg image */}
                     <div className='absolute top-0 left-0 w-full h-full z-0'>
                         <Image src={newsletterBg}

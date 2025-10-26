@@ -17,12 +17,12 @@ const Imagedesign = () => {
         <div>
           <SectionHeading
             badge="Discover"
-            title="Explore Bangladesh's Heritage & Wonders"
-            description="Marvel at the historical grandeur of Ahsan Manzil, wander through the lush mangroves of the Sundarbans, and pay tribute at the iconic National Martyrs Memorial — three must-visit landmarks of Bangladesh."
+            title="Explore Bangladesh's Wonders"
+            description="Visit Ahsan Manzil, the Sundarbans, and the National Martyrs Memorial — icons of Bangladesh’s beauty and heritage."
             alignment="center"
             badgeColor="#5BBF31"
             badgeTextColor="black"
-            h2Textcolor="black"
+            h2Textcolor="#323232"
             descriptionClolor="gray"
             className="mb-40"
           />

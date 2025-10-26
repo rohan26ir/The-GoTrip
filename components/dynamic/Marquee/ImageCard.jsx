@@ -39,8 +39,8 @@ export function ImageCard({
     >
       {/* Title and Description */}
       {(title || description) && (
-        <div className="text-center pb-20 max-w-[80%] mx-auto">
-          {title && <h2 className="font-apache text-4xl font-bold mb-4">{title}</h2>}
+        <div className="text-center pb-10 max-w-[95%] md:max-w-[80%] mx-auto">
+          {title && <h2 className="font-apache text-[#323232] text-5xl md:text-7xl font-bold ">{title}</h2>}
           {description && (
             <p className="text-xl text-gray-600 dark:text-gray-300">
               {description}
@@ -50,7 +50,7 @@ export function ImageCard({
       )}
 
       {/* First Row - Left to Right with staggered cards */}
-      <Marquee pauseOnHover className={`[--duration:${marqueeSpeed}s]`}>
+      <Marquee pauseOnHover >
         {firstRow.map((image) => (
           <div key={`first-${image.id}`} className="mx-0.5">
             <SingleImageCard
@@ -63,8 +63,8 @@ export function ImageCard({
         ))}
       </Marquee>
 
-      {/* Second Row - Right to Left with staggered cards */}
-      <Marquee reverse pauseOnHover className={`[--duration:${reverseSpeed}s]`}>
+      {/* Second Row - Right to Left with staggered cards
+      <Marquee reverse pauseOnHover >
         {secondRow.map((image) => (
           <div key={`second-${image.id}`} className="mx-0.5">
             <SingleImageCard
@@ -75,7 +75,7 @@ export function ImageCard({
             />
           </div>
         ))}
-      </Marquee>
+      </Marquee> */}
 
       {/* Gradient overlays */}
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-gray-900 dark:via-gray-900/80"></div>

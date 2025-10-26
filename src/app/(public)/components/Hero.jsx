@@ -8,7 +8,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[100vh] overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 left-[-80%] lg:left-0">
         <Image

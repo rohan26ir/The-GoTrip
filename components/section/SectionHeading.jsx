@@ -37,7 +37,7 @@ const SectionHeading = ({
 
       {/* Main Title */}
       <h2
-        className="font-apache text-2xl md:text-lg lg:text-4xl font-bold leading-tight max-w-4xl"
+        className="font-apache text-[#323232] text-2xl md:text-lg lg:text-7xl font-bold leading-tight max-w-7xl"
         style={{ color: h2Textcolor }}
       >
         {title}
@@ -46,7 +46,7 @@ const SectionHeading = ({
       {/* Description */}
       {description && (
         <p
-          className="text-base md:text-lg text-gray-500 max-w-3xl mt-1"
+          className="text-base md:text-lg text-gray-500 max-w-3xl "
           style={{ color: descriptionClolor }}
         >
           {description}
