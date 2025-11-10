@@ -5,6 +5,10 @@ import { MapPin, Phone, Mail, Clock, Send, ArrowRight, MessageCircle, ChevronDow
 import AboutBG from "../../../../public/Section/About.webp";
 import AboutBGbtm from "../../../../public/Section/about-bottom.webp";
 import Image from "next/image";
+import Lottie from "lottie-react";
+
+import support from '../../../../public/lottie/Support-chat.json'
+import tavel from '../../../../public/lottie/travel-the-globe.json'
 
 const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -93,16 +97,40 @@ const ContactUs = () => {
       {/* Contact Section */}
       <section className="py-20 -mt-10 relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+
+          <div className="mx-auto grid md:grid-cols-5">
+
+            <div className="relative z-0 col-span-2 -mr-80 flex items-center justify-center overflow-hidden p-5 md:p-0">
+              <Lottie
+                animationData={tavel}
+                loop={true}
+                autoplay={true}
+                className="h-60 md:h-full w-auto mb-0 rotate-[120deg]"
+              />
+
+            </div>
+
             {/* Contact Form */}
-            <div className="flex flex-col justify-between bg-white rounded-3xl shadow-2xl overflow-hidden border-0">
-              <div className="bg-black text-white pb-8 px-8 pt-8">
+            <div className="col-span-3 relative z-10 justify-between p-8 bg-white rounded-lg border-l md:border-l-0 border-y border-r overflow-hidden">
+
+              <div>
+                <Lottie
+                animationData={support}
+                loop={true}
+                autoplay={true}
+                className="h-28 w-auto mb-0"
+                />
+              </div>
+
+              <div className="text-start mb-3">
                 <h2 className="text-3xl font-bold">Send us a Message</h2>
-                <p className="text-blue-100 text-lg mt-2">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                <p className="text-md mt-0">
+                  Fill out the form and we'll reply within 24 hours.
                 </p>
               </div>
-              <div className="p-8">
+
+              <div className="border-0">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -129,7 +157,8 @@ const ContactUs = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
                     <label className="text-sm font-medium text-gray-700 block">
                       Email Address *
                     </label>
@@ -150,6 +179,7 @@ const ContactUs = () => {
                       placeholder="+1 (555) 123-4567"
                       className="w-full h-12 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                     />
+                  </div>
                   </div>
 
                   <div className="space-y-2">
@@ -180,7 +210,7 @@ const ContactUs = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full h-12 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full h-12 text-lg bg-black hover:bg-[#fa6741] cursor-pointer text-white rounded-lg font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -198,13 +228,41 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Contact Information */}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="container mx-auto">
+        {/* Contact Information */}
             <div className="space-y-6">
-              <div className="bg-white rounded-3xl shadow-xl p-8 border-0">
+
+              
+
+              {/* Map */}
+              <div className="relative w-full bg-white rounded-3xl shadow-xl  md:overflow-hidden border-0  ">
+                
+                <div className="w-full h-[525px]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.4681926535022!2d90.30707740958026!3d23.873091083971303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70e67bbf977%3A0xad83526c894485f0!2sCity%20University!5e0!3m2!1sen!2sbd!4v1760938760659!5m2!1sen!2sbd"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="City University Location"
+                    className="w-full h-full"
+                  />
+                </div>
+
+
+
+                <div className="relative md:absolute right-2 top-2 w-full md:w-[50%] flex flex-col justify-between bg-white rounded-3xl shadow-xl p-8 border-0">
                 <h2 className="text-3xl font-bold bg-black bg-clip-text text-transparent mb-4">
                   Contact Information
                 </h2>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 text-lg mb-1">
                   Choose the most convenient way to reach out to our team.
                 </p>
                 
@@ -212,10 +270,10 @@ const ContactUs = () => {
                   {contactInfo.map((item, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border-0"
+                      className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-3 shadow-sm hover:shadow-md transition-all duration-300 border-0"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white shadow-lg">
                           {item.icon}
                         </div>
                         <div className="flex-1">
@@ -234,33 +292,9 @@ const ContactUs = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Map */}
-              <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-0">
-                <div className="p-6 pb-4">
-                  <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-900">
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    Visit Our Location
-                  </h3>
-                </div>
-                <div className="w-full h-60">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.4681926535022!2d90.30707740958026!3d23.873091083971303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70e67bbf977%3A0xad83526c894485f0!2sCity%20University!5e0!3m2!1sen!2sbd!4v1760938760659!5m2!1sen!2sbd"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="City University Location"
-                    className="w-full h-full"
-                  />
-                </div>
                 
               </div>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* FAQ Section */}
