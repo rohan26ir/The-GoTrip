@@ -49,7 +49,7 @@ const Page = () => {
                   <Image
                     src={signupImage}
                     alt="signup-image"
-                    className="h-12 w-auto bg-[#FA6741] rounded-lg p-1"
+                    className="h-12 w-auto bg-black scale-x-[-1] rounded-lg p-1"
                     width={48}
                     height={48}
                   />

@@ -21,6 +21,7 @@ const Slider = ({ slides }) => {
     }
   };
 
+  
   return (
     <div className="h-full w-full">
       <Swiper
