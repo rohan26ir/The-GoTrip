@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 
 import signInAnimation from "../../../../public/lottie/login.json";
-import signupImage from "../../../../public/logo/navbar.png";
+import signupImage from '../../../../public/icon/icons8-aircraft.png';
 import Image from "next/image";
 import SocialLog from "../components/SocialLog";
 import Divided from "../components/Divided";
@@ -71,7 +71,7 @@ const Page = () => {
                     <Image
                     src={signupImage}
                     alt='signup-image'
-                    className='h-14 w-auto bg-[#FA6741] rounded-lg p-1'
+                    className='h-14 w-auto bg-black scale-x-[-1] rounded-lg p-2'
                     width={56}
                     height={56}
                   />

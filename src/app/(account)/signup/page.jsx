@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 
 // Image
-import signupImage from '../../../../public/logo/navbar.png';
+import signupImage from '../../../../public/icon/icons8-aircraft.png';
 
 import firstImage from '../../../../public/marquee/image.webp';
 import firstImage1 from '../../../../public/marquee/image1.webp';
@@ -114,7 +114,7 @@ const Page = () => {
                     <Image
                     src={signupImage}
                     alt='signup-image'
-                    className='h-14 w-auto bg-[#FA6741] rounded-lg p-1'
+                    className='h-14 w-auto bg-black scale-x-[-1] rounded-lg p-2'
                     width={56}
                     height={56}
                   />
