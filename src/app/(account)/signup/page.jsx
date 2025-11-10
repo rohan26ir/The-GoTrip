@@ -134,6 +134,19 @@ const Page = () => {
                     />
                   </div>
 
+                  
+
+                  {/* Additional fields to demonstrate scrolling */}
+                  <div className='flex flex-col gap-2'>
+                    <label htmlFor="phone" className='text-lg font-bold'>Phone Number</label>
+                    <input 
+                      id="phone"
+                      type="tel" 
+                      placeholder='Enter your phone number' 
+                      className='border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300'
+                    />
+                  </div>
+
                   <div className='flex flex-col gap-2'>
                     <label htmlFor="email" className='text-lg font-bold'>Email</label>
                     <input 
@@ -156,25 +169,6 @@ const Page = () => {
                     />
                   </div>
 
-                  {/* Additional fields to demonstrate scrolling */}
-                  <div className='flex flex-col gap-2'>
-                    <label htmlFor="phone" className='text-lg font-bold'>Phone Number</label>
-                    <input 
-                      id="phone"
-                      type="tel" 
-                      placeholder='Enter your phone number' 
-                      className='border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300'
-                    />
-                  </div>
-
-                  <div className='flex flex-col gap-2'>
-                    <label htmlFor="address" className='text-lg font-bold'>Address</label>
-                    <textarea 
-                      id="address"
-                      placeholder='Enter your address' 
-                      className='border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 min-h-[100px]'
-                    />
-                  </div>
 
                   <div className='flex items-center gap-2'>
                     <input 
