@@ -46,13 +46,15 @@ const Page = () => {
             <div className="lg:hidden w-full bg-gradient-to-br from-blue-50 to-orange-50 py-6 px-4">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <Image
+                  <Link href={'/'}>
+                    <Image
                     src={signupImage}
-                    alt="signup-image"
-                    className="h-12 w-auto bg-black scale-x-[-1] rounded-lg p-1"
-                    width={48}
-                    height={48}
+                    alt='signup-image'
+                    className='h-14 w-auto bg-black scale-x-[-1] rounded-lg p-2'
+                    width={56}
+                    height={56}
                   />
+                </Link>
                 </div>
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
                   Welcome Back!

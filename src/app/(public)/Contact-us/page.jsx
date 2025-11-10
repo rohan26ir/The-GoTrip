@@ -99,9 +99,9 @@ const ContactUs = () => {
         <div className="container mx-auto px-4">
 
 
-          <div className="mx-auto grid md:grid-cols-5">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-5">
 
-            <div className="relative z-0 col-span-2 -mr-80 flex items-center justify-center overflow-hidden p-5 md:p-0">
+            <div className="relative mx-auto z-0 col-span-2 -mb-36 md:-mr-80 flex items-center justify-center overflow-hidden p-5 md:p-0">
               <Lottie
                 animationData={tavel}
                 loop={true}

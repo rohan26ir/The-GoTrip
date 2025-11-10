@@ -58,13 +58,15 @@ const Page = () => {
         <div className='lg:hidden w-full bg-gradient-to-br from-blue-50 to-orange-50 py-8 px-6'>
           <div className='text-center mb-6'>
             <div className='flex justify-center mb-4'>
-              <Image
-                src={signupImage}
-                alt='signup-image'
-                className='h-14 w-auto bg-black scale-x-[-1] rounded-lg p-1'
-                width={56}
-                height={56}
-              />
+              <Link href={'/'}>
+                    <Image
+                    src={signupImage}
+                    alt='signup-image'
+                    className='h-14 w-auto bg-black scale-x-[-1] rounded-lg p-2'
+                    width={56}
+                    height={56}
+                  />
+                </Link>
             </div>
             <h1 className='text-2xl md:text-3xl font-bold text-gray-800'>Welcome to GoTrip</h1>
             <p className='text-gray-600 mt-2 text-base md:text-lg'>Start your adventure with us</p>
