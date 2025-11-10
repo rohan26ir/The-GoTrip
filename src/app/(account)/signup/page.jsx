@@ -110,13 +110,15 @@ const Page = () => {
               <div className='p-6 md:p-10'>
                 {/* Logo hidden on small & medium devices since it's in the hero section */}
                 <div className='hidden lg:flex justify-center'>
-                  <Image
+                  <Link href={'/'}>
+                    <Image
                     src={signupImage}
                     alt='signup-image'
                     className='h-14 w-auto bg-[#FA6741] rounded-lg p-1'
                     width={56}
                     height={56}
                   />
+                  </Link>
                 </div>
                 
                 <div className='py-5 flex flex-col text-center gap-1.5'>
