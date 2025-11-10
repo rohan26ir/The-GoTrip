@@ -13,6 +13,8 @@ import firstImage3 from '../../../../public/marquee/image3.webp';
 // import
 import Link from 'next/link';
 import Slider from '../../../../components/dynamic/Slider';
+import SocialLog from '../components/SocialLog';
+import Divided from '../components/Divided';
 
 const slides = [
   {
@@ -103,8 +105,8 @@ const Page = () => {
         
         {/* Form Section - Scrollable */}
         <div className='w-full lg:w-1/2'>
-          <div className='min-h-screen flex items-center justify-center p-6 md:p-10 lg:p-20 overflow-y-auto'>
-            <div className='bg-white rounded-lg shadow-lg w-full max-w-md my-auto'>
+          <div className='min-h-screen flex items-center justify-center p-6 md:p-10 lg:p-10 overflow-y-auto'>
+            <div className='bg-white rounded-lg shadow-lg w-full my-auto'>
               <div className='p-6 md:p-10'>
                 {/* Logo hidden on small & medium devices since it's in the hero section */}
                 <div className='hidden lg:flex justify-center'>
@@ -190,6 +192,10 @@ const Page = () => {
                   </button>
                 </form>
 
+                <Divided></Divided>
+
+                <SocialLog></SocialLog>
+
                 <p className='pt-5 text-sm text-center text-gray-500'>
                   By joining, you are agreeing to our{' '}
                   <span className='text-gray-800 hover:text-[#FA6741] transition duration-300'>
@@ -204,7 +210,7 @@ const Page = () => {
                 <div className='mt-6 text-center'>
                   <p className='text-gray-600'>
                     Already have an account?{' '}
-                    <Link href="/login" className='text-[#FA6741] hover:underline font-semibold'>
+                    <Link href="/SignIn" className='text-[#FA6741] hover:underline font-semibold'>
                       Sign In
                     </Link>
                   </p>
