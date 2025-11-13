@@ -21,6 +21,7 @@ import image12 from '../../../public/marquee/image5.webp'
 import Imagedesign from "./components/Imagedesign";
 import HomeFAQ from "./components/HomeFAQ";
 import Worldmap from "./components/Worldmap";
+import Testimonal from "./components/Testimonal";
 
 const travelImages = [
   {
@@ -135,6 +136,10 @@ const Page = () => {
      
      <section>
       <Worldmap> </Worldmap>
+     </section>
+
+     <section>
+      <Testimonal></Testimonal>
      </section>
 
      <section className="bg-lime-300/20 py-10">
