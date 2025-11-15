@@ -31,6 +31,7 @@ html {
 @layer utilities {
   .font-apache {
     font-family: var(--font-apache), sans-serif;
+    letter-spacing: 0.03em; /* adjust spacing */
   }
 }
 
@@ -191,3 +192,4 @@ html {
     @apply bg-background text-foreground;
   }
 }
+

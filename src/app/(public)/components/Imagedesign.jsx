@@ -13,7 +13,6 @@ const Imagedesign = () => {
   return (
     <div>
       <div className="w-full max-w-[1700px] mx-auto pt-20 pb-32 my-10">
-
         {/* Heading */}
         <SectionHeading
           badge="Discover"
@@ -29,7 +28,6 @@ const Imagedesign = () => {
 
         {/* Image Section */}
         <div className="relative p-4 md:p-0">
-
           {/* Mobile Grid View */}
           <div className="grid grid-cols-1 gap-4 md:hidden">
             {/* All same size & stylish */}
@@ -77,7 +75,6 @@ const Imagedesign = () => {
               />
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -5,6 +7,7 @@ import Link from "next/link";
 // Hero section image import
 import heroBg from "../../../../public/Section/hero-bg.webp";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import Counter from "../../../../components/dynamic/Counter";
 
 const Hero = () => {
   return (
@@ -88,13 +91,13 @@ const Hero = () => {
           {/* Quick Stats */}
           <div className="flex flex-wrap gap-6 text-white">
             {[
-              { number: "700+", label: "Destinations" },
-              { number: "50+", label: "Tour Packages" },
-              { number: "10K+", label: "Travelers" },
+              { number: "700", symble:'+',  label: "Destinations" },
+              { number: "50",  symble:'+', label: "Tour Packages" },
+              { number: "10", symble:'k+',  label: "Travelers" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-green-400">
-                  {stat.number}
+                <div className="text-2xl font-bold text-green-400 flex">
+                  <Counter Number={stat.number} duration={2000} /> {stat.symble}
                 </div>
                 <div className="text-sm text-gray-300">{stat.label}</div>
               </div>

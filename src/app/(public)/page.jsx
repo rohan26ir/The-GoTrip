@@ -22,6 +22,7 @@ import Imagedesign from "./components/Imagedesign";
 import HomeFAQ from "./components/HomeFAQ";
 import Worldmap from "./components/Worldmap";
 import Testimonal from "./components/Testimonal";
+import StatsSection from "./components/StatsSection";
 
 const travelImages = [
   {
@@ -132,6 +133,10 @@ const Page = () => {
 
      <section className=" mx-auto">
        <Imagedesign></Imagedesign>
+     </section>
+     
+     <section>
+       <StatsSection></StatsSection>
      </section>
      
      <section>
