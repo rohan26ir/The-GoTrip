@@ -1,9 +1,8 @@
-// app/layout.js
+// app/layout.jsx
 import "../style/globals.css";
 import localFont from "next/font/local";
 import ogImage from "../../public/og_image.png";
-import offlineFavicon from "../../public/favicon.jpg"; // local favicon
-import onlineFavicon from "../../public/favicon-32.png"; // local favicon
+import NetworkFavicon from "../../components/NetworkFavicon";
 
 const apache = localFont({
   src: "./fonts/AldotheApache.woff2",
@@ -49,26 +48,18 @@ export const metadata = {
     site: "@TheGoTrip",
   },
   icons: {
-    icon: [
-      {
-        url: onlineFavicon, // online favicon
-      },
-      {
-        url: offlineFavicon.src, // local/offline favicon
-      },
-    ],
-    shortcut: offlineFavicon.src, // for browser shortcut icon
+    icon: "/favicon-32.png", // default online favicon
+    shortcut: "/favicon-32.png",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={apache.variable}>
-      <head>
-        {/* Fallback meta and favicon for older browsers */}
-        <link rel="icon" href={offlineFavicon.src} />
-      </head>
-      <body>{children}</body>
+      <body>
+        <NetworkFavicon />
+        {children}
+      </body>
     </html>
   );
 }
